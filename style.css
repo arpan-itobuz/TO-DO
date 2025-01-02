@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: bisque;
+  width: 89%;
+  padding: 12px 7px 20px 11px;
+  margin-top: 29px;
+}
+@media (min-width: 768px) {
+  .container {
+    margin-top: 104px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 70%;
+    padding: 25px 7px 23px 11px;
+    margin-top: 104px;
+  }
+}
+
+.heading {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.text-box {
+  width: 70%;
+}
+
+.btn-add {
+  width: 21%;
+}
+@media (min-width: 768px) {
+  .btn-add {
+    width: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-add {
+    width: 8%;
+  }
+}
+@media (min-width: 1440px) {
+  .btn-add {
+    width: 7%;
+  }
+}
+
+.task-list {
+  max-height: 50vh;
+  overflow: scroll;
+  overflow-y: scroll;
+  margin-top: 29px;
+}
+
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: beige;
+  border-radius: 5px;
+  width: 79%;
+  margin-left: 26px;
+  margin-top: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .task-container {
+    margin-bottom: 17px;
+    margin-left: 63px;
+  }
+}
+@media (min-width: 1024px) {
+  .task-container {
+    width: 55%;
+    margin-left: 201px;
+  }
+}
+@media (min-width: 1440px) {
+  .task-container {
+    width: 39%;
+    margin-left: 437px;
+  }
+}
+.task-container:hover {
+  background-color: aquamarine;
+}
+
+.task-name {
+  margin: 0;
+  flex-grow: 1;
+  overflow: scroll;
+  max-height: 50vh;
+}
+.task-name::-webkit-scrollbar {
+  display: none;
+}
+
+.complete-task {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.task-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.task-btn-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+}
+
+.buttons {
+  flex-wrap: wrap;
+  gap: 21px;
+  -moz-column-gap: 311px;
+       column-gap: 311px;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .buttons {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+
+.footer-button.active {
+  background-color: gainsboro;
+  color: black;
+}/*# sourceMappingURL=style.css.map */
