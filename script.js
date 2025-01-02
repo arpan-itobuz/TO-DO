@@ -57,7 +57,7 @@ const todo = (filter) => {
             todoList.appendChild(newTask);
         }
     }
-    console.log("Current tasks: ", tasks);
+    
 };
 
 const addTask = () => {
@@ -67,7 +67,7 @@ const addTask = () => {
     if (task !== "") {
         if (!tasks.hasOwnProperty(task)) { 
             tasks = { [task]: false, ...tasks }; 
-            console.log(`Task "${task}" added.`);
+           
             saveToLocalStorage();
         } else {
             alertBox.style.display = 'block';
@@ -92,7 +92,7 @@ todoInput.addEventListener("keypress", (e) => {
 
 const deleteTask = (task) => {
     delete tasks[task];
-    console.log(`Task "${task}" deleted.`);
+   
     saveToLocalStorage();
     todo('all');
 };
@@ -100,7 +100,7 @@ const deleteTask = (task) => {
 const completeTask = (task) => {
     if (tasks.hasOwnProperty(task)) {
         tasks[task] = !tasks[task]; 
-        console.log(`Task "${task}" marked as ${tasks[task] ? "complete" : "incomplete"}.`);
+        
         saveToLocalStorage();
     }
 
@@ -145,7 +145,7 @@ clearBtn.addEventListener("click", () => {
     for (const task in tasks) {
         if (tasks[task]) {
             delete tasks[task];
-            console.log(`Completed task "${task}" cleared.`);
+  
         }
     }
     saveToLocalStorage();
